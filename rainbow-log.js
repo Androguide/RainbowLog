@@ -8,7 +8,7 @@
     // `schemes`: a 2-dimensional array to hold the respective identifiers & colors.
         schemes = [
             ["e", "s", "i"],
-            ["#c0392b", "#2ecc71", "#1abc9c"]
+            ["#c0392b", "#2ecc71", "#3498db"]
         ];
 
     // **loop**: Loop from `i` to 0
@@ -16,9 +16,9 @@
     while(i--) consoleProxy[schemes[0][i]] = f(i);
 
     function f(j) {
-        return function(m) {
+        return function(m, s) {
             // Put the pieces together, apply the CSS rules, and match the corresponding color in the second inner-array of the `schemes` variable
-            consoleProxy.log('%c' + m, 'color:#ecf0f1;background:' + schemes[1][j])
+            consoleProxy.log('%c' + m, s+ ';color:#fff;background:' + schemes[1][j])
         };
     }
 })();
