@@ -7,9 +7,9 @@ This ultra-lightweight library _(only 175 bytes minified!)_ extends the javascri
 ### Introduction  
 3 color-schemes are defined by default, order by debug level:
 
-  - `console.e('your message')`: the **e** stands for **error**, this will output your message in white on red (see screenshots below).
-  - `console.s('your message')`: the **s** stands for **success**, this will output your message in white on green (see screenshots below).
-  - `console.i('your message')`: the **i** stands for **info**, this will output your message in white on teal (see screenshots below).
+  - ```console.e('your message')```: the **e** stands for **error**, this will output your message in white on red (see screenshots below).
+  - ```console.s('your message')```: the **s** stands for **success**, this will output your message in white on green (see screenshots below).
+  - ```console.i('your message')```: the **i** stands for **info**, this will output your message in white on teal (see screenshots below).
 
     
     
