@@ -30,7 +30,7 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span></pre></div></div>
             
         </li>
         
@@ -45,7 +45,7 @@
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> consoleProxy = console;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> consoleProxy = console,</pre></div></div>
             
         </li>
         
@@ -56,11 +56,11 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
-              <p><code>schemes</code>: a 2-dimensional array to hold the respective identifiers &amp; colors.</p>
+              <p><code>i</code>: A simple iterator for the loop</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> schemes = [[<span class="hljs-string">'e'</span>, <span class="hljs-string">'s'</span>, <span class="hljs-string">'i'</span>], [<span class="hljs-string">'#c0392b'</span>, <span class="hljs-string">'#2ecc71'</span>, <span class="hljs-string">'#1abc9c'</span>]];</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        i = <span class="hljs-number">3</span>,</pre></div></div>
             
         </li>
         
@@ -71,11 +71,14 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-4">&#182;</a>
               </div>
-              <p><code>i</code>: A simple iterator for the loop</p>
+              <p><code>schemes</code>: a 2-dimensional array to hold the respective identifiers &amp; colors.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> i = <span class="hljs-number">2</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        schemes = [
+            [<span class="hljs-string">"e"</span>, <span class="hljs-string">"s"</span>, <span class="hljs-string">"i"</span>],
+            [<span class="hljs-string">"#c0392b"</span>, <span class="hljs-string">"#2ecc71"</span>, <span class="hljs-string">"#1abc9c"</span>]
+        ];</pre></div></div>
             
         </li>
         
@@ -86,11 +89,15 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-5">&#182;</a>
               </div>
-              <p><strong>loop</strong>: Loop from <code>i</code> to 0</p>
+              <p><strong>loop</strong>: Loop from <code>i</code> to 0
+For each identifier in the first inner-array of the <code>schemes</code> variable, we create a new property of the console object</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">while</span> (i--){</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">while</span>(i--) consoleProxy[schemes[<span class="hljs-number">0</span>][i]] = f(i);
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span><span class="hljs-params">(j)</span> {</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(m)</span> {</span></pre></div></div>
             
         </li>
         
@@ -101,42 +108,12 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
-              <p><code>j</code>: We need this global holder as we can’t access mutable variables from a closure (i.e: the <code>i</code> variable in this case)</p>
+              <p>Put the pieces together, apply the CSS rules, and match the corresponding color in the second inner-array of the <code>schemes</code> variable</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>         j = i;</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-7">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-7">&#182;</a>
-              </div>
-              <p>For each identifier in the first inner-array of the <code>schemes</code> variable, we create a new property of the console object</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>        consoleProxy[schemes[<span class="hljs-number">0</span>][i]] = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(m)</span> {</span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-8">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-8">&#182;</a>
-              </div>
-              <p>Put the pieces together, and match the corresponding color in the second inner-array of the <code>schemes</code> variable</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>            consoleProxy.log(<span class="hljs-string">'%c'</span> + m, <span class="hljs-string">'color:#ecf0f1;background:'</span> + [schemes[<span class="hljs-number">1</span>][j]]);
-        }
+            <div class="content"><div class='highlight'><pre>            consoleProxy.log(<span class="hljs-string">'%c'</span> + m, <span class="hljs-string">'color:#ecf0f1;background:'</span> + schemes[<span class="hljs-number">1</span>][j])
+        };
     }
 })();</pre></div></div>
             
