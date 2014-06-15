@@ -20,7 +20,7 @@ This ultra-lightweight library _(only 196 bytes minified!)_ extends the javascri
 
 ##### 1) Custom CSS
 You can pass any css property as a second argument:
-```
+```javascript
 console.e('Big Error', 'font-size: 4em');
 ```
 You can modify the default CSS properties for your log messages by locating & extending the following string with your properties, but add them to the left of the string so as to preserve the mutable background property:
