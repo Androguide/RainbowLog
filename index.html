@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Rainbowlog by Androguide</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Rainbowlog</h1>
+        <h2>Ultra-Lightweight Colored Output for JavaScript&#39;s `console.log()`</h2>
+        <a href="https://github.com/Androguide/RainbowLog" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="rainbow-log" class="anchor" href="#rainbow-log"><span class="octicon octicon-link"></span></a>RAINBOW LOG</h1>
+
+<p>This ultra-lightweight library <em>(only 196 bytes minified!)</em> extends the javascript <code>console</code> object to provide configurable colored output.</p>
+
+<p><img src="http://i.imgur.com/e36RL9q.png" alt="Screenshot"></p>
+
+<h3>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>
+
+<p>3 color-schemes are defined by default, order by debug level:</p>
+
+<ul>
+<li>
+<code>console.e('your message')</code>: the <strong>e</strong> stands for <strong>error</strong>, this will output your message in white on red (see screenshots above).</li>
+<li>
+<code>console.s('your message')</code>: the <strong>s</strong> stands for <strong>success</strong>, this will output your message in white on green (see screenshots above).</li>
+<li>
+<code>console.i('your message')</code>: the <strong>i</strong> stands for <strong>info</strong>, this will output your message in white on teal (see screenshots above).</li>
+</ul><h3>
+<a name="customization" class="anchor" href="#customization"><span class="octicon octicon-link"></span></a>Customization</h3>
+
+<h5>
+<a name="1-custom-css" class="anchor" href="#1-custom-css"><span class="octicon octicon-link"></span></a>1) Custom CSS</h5>
+
+<p>You can pass any css property as a second argument:</p>
+
+<pre><code>console.e('Big Error', 'font-size: 4em');
+</code></pre>
+
+<p>You can modify the default CSS properties for your log messages by locating &amp; extending the following string with your properties, but add them to the left of the string so as to preserve the mutable background property:</p>
+
+<div class="highlight highlight-css"><pre><span class="s2">";color:#ecf0f1;background:"</span>
+</pre></div>
+
+<h5>
+<a name="2-color-schemes" class="anchor" href="#2-color-schemes"><span class="octicon octicon-link"></span></a>2) Color Schemes</h5>
+
+<p>You can very easily define more color-schemes by locating the following piece of code and:</p>
+
+<ul>
+<li>adding your desired identifier &amp; background-color to the corresponding arrays</li>
+<li>incrementing the <code>i</code> variable to match the length of both inner arrays</li>
+</ul><div class="highlight highlight-javascript"><pre><span class="p">[[</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"s"</span><span class="p">,</span><span class="s2">"i"</span><span class="p">],[</span><span class="s2">"#c0392b"</span><span class="p">,</span><span class="s2">"#2ecc71"</span><span class="p">,</span><span class="s2">"#1abc9c"</span><span class="p">]],</span><span class="nx">i</span><span class="o">=</span><span class="mi">2</span>
+</pre></div>
+
+<p><br><strong>Example</strong>:
+Here we add a <code>console.menInBlack()</code> scheme which will output white on black text</p>
+
+<div class="highlight highlight-javascript"><pre><span class="p">[[</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"s"</span><span class="p">,</span><span class="s2">"i"</span><span class="p">,</span><span class="s2">"menInBlack"</span><span class="p">],[</span><span class="s2">"#c0392b"</span><span class="p">,</span><span class="s2">"#2ecc71"</span><span class="p">,</span><span class="s2">"#1abc9c"</span><span class="p">,</span> <span class="s2">"#000"</span><span class="p">]],</span><span class="nx">i</span><span class="o">=</span><span class="mi">3</span>
+</pre></div>
+
+<h3>
+<a name="compatibility" class="anchor" href="#compatibility"><span class="octicon octicon-link"></span></a>Compatibility</h3>
+
+<p>This should work with any decently recent version of Chrome &amp; Firefox</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Androguide/RainbowLog/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Androguide/RainbowLog/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Androguide/RainbowLog"></a> is maintained by <a href="https://github.com/Androguide">Androguide</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
