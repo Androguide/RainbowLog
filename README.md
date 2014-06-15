@@ -4,7 +4,7 @@ RAINBOW LOG
 
 This ultra-lightweight library _(only 196 bytes minified!)_ extends the javascript `console` object to provide configurable colored output.
 
-
+![Screenshot](http://i.imgur.com/e36RL9q.png)
 
 ### Introduction  
 3 color-schemes are defined by default, order by debug level:
